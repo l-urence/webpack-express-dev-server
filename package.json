@@ -1,0 +1,38 @@
+{
+  "name": "webpack-express-dev-server",
+  "version": "0.0.1",
+  "description": "In-memory webpack bundled express server ",
+  "main": "src/index.js",
+  "bin": "bin/webpack-express-dev-server.js",
+  "scripts": {
+    "lint": "eslint bin/ src/",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "in-memory",
+    "webpack",
+    "express"
+  ],
+  "author": "Laurence Bortfeld",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "webpack": "^1.12.14"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "dependencies": {
+    "yargs": "^4.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l-urence/webpack-express-dev-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/l-urence/webpack-express-dev-server/issues"
+  },
+  "homepage": "https://github.com/l-urence/webpack-express-dev-server#readme"
+}
