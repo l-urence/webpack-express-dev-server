@@ -1,5 +1,5 @@
 # webpack-express-dev-server
-I basically stated this project because I wanted server side rendering with css modules and was overwhelmed by the [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools) configuration.
+I basically stated this project because I wanted server side rendering with css modules and was overwhelmed by the [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools) configuration. webpack-express-dev-server bundles the express server in-memory and runs it from there.
 
 webpack-express-dev-server works well with [webpack-dev-server](https://github.com/webpack/webpack-dev-server) and its proxy.
 
@@ -46,5 +46,20 @@ Run the following command to start the webpack-express-dev-sever:
 $ node ./node_modules/webpack-express-dev-server/bin/webpack-express-dev-server.js [--watch]
 ```
 
+or with in your `package.json`:
+
+```json
+// ...
+scripts: {
+  "startdevserver": "webpack-express-dev-server"
+}
+// ... 
+```
+
+and then run:
+
+```shell
+$ npm run startdevserver -- [--watch]
+```
 ## Contribution
 Pull request are welcome or open an issue if something breaks or  is missing ;).
