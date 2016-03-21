@@ -46,7 +46,7 @@ Server.prototype.run = function () {
     }
 
     // If there are any previous running
-    // worker shout them down.
+    // worker shut them down.
     killWorkers(cluster.workers);
 
     const worker = cluster.fork();
