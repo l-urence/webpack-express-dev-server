@@ -1,7 +1,7 @@
 # webpack-express-dev-server [![npm version](https://badge.fury.io/js/webpack-express-dev-server.svg)](https://badge.fury.io/js/webpack-express-dev-server)
 I basically stated this project because I wanted server side rendering with css modules and was overwhelmed by the [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools) configuration. webpack-express-dev-server bundles the express server in-memory and runs it from there.
 
-webpack-express-dev-server works well with [webpack-dev-server](https://github.com/webpack/webpack-dev-server) and it`s proxy.
+webpack-express-dev-server works well with [webpack-dev-server](https://github.com/webpack/webpack-dev-server) and it's proxy.
 
 But be warned use it only for development and there are still some parts missing (examples, command line arguments, more flexible configuration, test/support webpack plugins, etc.).
 
