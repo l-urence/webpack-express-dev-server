@@ -1,19 +1,20 @@
 # webpack-express-dev-server [![npm version](https://badge.fury.io/js/webpack-express-dev-server.svg)](https://badge.fury.io/js/webpack-express-dev-server)
-I basically stated this project because I wanted server side rendering with css modules and was overwhelmed by the [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools) configuration. webpack-express-dev-server bundles the express server in-memory and runs it from there.
+Make developing server-side rendering web applications with webpack painless. 
 
-webpack-express-dev-server works well with [webpack-dev-server](https://github.com/webpack/webpack-dev-server) and it's proxy.
+* Reuse most of your webpack configuration to bundle server code.
+* Run the server in-memory.
+* Use `--watch` to auto reload server.
+* Works well with [webpack-dev-server](https://github.com/webpack/webpack-dev-server) to bundle client assets.
 
-But be warned use it only for development and there are still some parts missing (examples, command line arguments, more flexible configuration, test/support webpack plugins, etc.).
 
-## Usage
-First things first install webpack-express-dev-server from npm or latest changes from github.com:
+## Install / Usage
 
 ```shell
 $ npm install --save-dev webpack-express-dev-server # from npm
 $ npm install --save-dev https://github.com/l-urence/webpack-express-dev-server # from github.com
 ```
 
-The only configuration file you need to create in your project root is the `webpack.server.config.js` file. It should basically look like your `webpack.config.js`.
+The only configuration file you need to create in your project root is the `webpack.server.config.js` file. It should almost look like your `webpack.config.js`.
 
 ```javascript
 // You may want to install webpack-node-externals to
@@ -61,5 +62,6 @@ and then run:
 ```shell
 $ npm run startdevserver -- [--watch]
 ```
+
 ## Contribution
 Pull request are welcome or open an issue if something breaks or  is missing ;).
