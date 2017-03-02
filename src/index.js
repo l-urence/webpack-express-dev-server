@@ -37,16 +37,15 @@ Server.prototype.run = function () {
     }
 
     const jsonStats = stats.toJson();
-    if (jsonStats.errors.length > 0) {
-      return console.error(jsonStats.errors);
+    const { errors = [], warnings = [] } = jsonStats;
+
+    warnings.forEach(w => console.warn(w))
+
+    if (errors.length > 0) {
+      return errors.forEach(e => console.error(e))
     }
 
-    if (jsonStats.warnings.length > 0) {
-      return console.warn(jsonStats.warnings);
-    }
-
-    // If there are any previous running
-    // worker shut them down.
+    // If there are any previous running worker shout them down.
     killWorkers(cluster.workers);
 
     const worker = cluster.fork();
@@ -63,5 +62,3 @@ Server.prototype.run = function () {
     this.compiler.run(compilerCb.bind(this));
   }
 };
-
-module.exports = Server;
